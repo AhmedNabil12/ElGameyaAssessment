@@ -1,4 +1,6 @@
 body {
+  background: #7243e5;
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -7,7 +9,153 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+*
+{
+    z-index: 1;
+}
+
+
+.navbar-wrapper {
+    background: #2c3137;
+    box-shadow: rgba(255, 255, 255, 0.25) 
+    0px 54px 55px, rgba(255, 255, 255, 0.25)
+    0px -12px 30px, rgba(255, 255, 255, 0.25) 
+    0px 4px 6px, rgba(255, 255, 255, 0.25)
+    0px 12px 13px, rgba(255, 255, 255, 0.25)
+    0px -3px 5px;
+    width: 80%;
+    margin: 0 auto;
+
+    display: flex;
+    width: 100%;
+    margin:0 auto 0px auto;
+    justify-content:space-between ;
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+nav {
+    float: right;
+    padding-right: 2%;
+}
+
+.nav-list {
+    position: relative;
+    margin-top: 2%;
+    padding: 0;
+    list-style: none;
+}
+
+.list-item {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 25px;
+    position: relative;
+}
+
+.list-item a{
+    color: #000;
+    text-size-adjust: 15;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.list-item a:hover {
+    color: #000;
+}
+
+.list-item a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #444;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+.list-item a:hover::before {
+   width:100%;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.cardContainerr {
+    margin: 2rem 2rem 2rem 0;
+    padding: 1.5rem;
+    width: 250px;
+    box-shadow: 0 0 28px 4px rgba(0,0,0,0.1);
+    transition: transform .3s ease;
+    cursor: pointer;
+}
+
+.cardContainerr:hover {
+    transform: scale(1.1);
+}
+
+.cardTitle {
+    font-weight: 800;
+    font-size: 1.5rem; 
+}
+
+
+.cardImage {
+
+    display: flex;
+    justify-content: flex-end;
+}
+.cardImage img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.cardButton{
+    width: 15;
+    height: 20;
+}
+
+.logoSymbol{
+    width:75px;
+    height: auto;
+}
+
+.symbol{
+    width:30px;
+}
+
+button{
+    color: indigo;
+    background-color:pink
+}
+
+.singleCardImg{
+    width: 50;
+    height: auto;
 }
